@@ -192,47 +192,60 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
                   context: context,
                   builder: (BuildContext context) {
                     return Container(
-                        height: 200,
+                        height: 150,
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(8,20,0,0),
                           child: Column(
                             children: [
-                              Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              Row( mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  SizedBox(width:50),
+                                  SizedBox(width:100),
                                   Text("wins"),
                                   Text("Losses"),
-                                  Text("Draw: $draw")
+                                  Text("Draw")
                                 ],
                               ),
                               SizedBox(
                                 height: 20,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(15,0,0,0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      "Player 1 win: $player1win loose: $player1Loose",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                    
-                                  ],
-                                ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Player 1",
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                  Text(
+                                      "$player1win", style: TextStyle(fontSize: 20)
+                                  ),
+                                  Text(
+                                    "$player1Loose", style: TextStyle(fontSize: 20)
+                                  ),
+                                  Text(
+                                    "$draw", style: TextStyle(fontSize: 20)
+                                  )
+                                ],
                               ),
                               SizedBox(
                                 height: 20,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(15,0,0,0),
-                                child: Row(
-                                  children: [
-                                    Text(
-                                      "Player 2 win: $player2win loose: $player2Loose",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                  ],
-                                ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text(
+                                    "Player 2",
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                  Text(
+                                      "$player2win", style: TextStyle(fontSize: 20)
+                                  ),
+                                  Text(
+                                    "$player2Loose", style: TextStyle(fontSize: 20)
+                                  ),
+                                  Text(
+                                    "$draw", style: TextStyle(fontSize: 20)
+                                  )
+                                ],
                               ),
                             ],
                           ),
